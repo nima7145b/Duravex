@@ -8,8 +8,6 @@ echo "=== DURAVEX X-UI Installer ==="
 
 export DEBIAN_FRONTEND=noninteractive
 
-apt-get update
-apt-get install -y curl tar tzdata ca-certificates
 
 rm -rf "$TMP" /tmp/duravex.tar.gz
 mkdir -p "$TMP"
