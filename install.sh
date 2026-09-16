@@ -1,11 +1,11 @@
 #!/bin/bash
 set -e
 
-REPO="https://github.com/nima7145b/Duravex.git"
+REPO="https://github.com/nima7145b/Duravex/archive/refs/heads/main.tar.gz"
 TMP="/tmp/duravex-install"
 
 rm -rf "$TMP"
-git clone --depth 1 "$REPO" "$TMP"
+mkdir -p "$TMP" && curl -4Ls "$REPO" -o /tmp/duravex.tar.gz && tar -xzf /tmp/duravex.tar.gz -C "$TMP" --strip-components=1
 
 rm -rf /usr/local/x-ui
 mkdir -p /usr/local/x-ui
