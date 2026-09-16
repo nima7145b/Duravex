@@ -15,6 +15,7 @@ cp -f "$TMP/x-ui.service" /etc/systemd/system/x-ui.service
 chmod +x /usr/local/x-ui/x-ui
 chmod +x /usr/local/x-ui/x-ui.sh
 chmod +x /usr/local/x-ui/x-ui.rc
+ln -sf /usr/local/x-ui/x-ui.sh /usr/local/bin/x-ui
 
 systemctl daemon-reload
 systemctl enable x-ui
