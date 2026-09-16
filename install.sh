@@ -7,6 +7,7 @@ TMP="/tmp/duravex-install"
 echo "=== DURAVEX X-UI Installer ==="
 
 export DEBIAN_FRONTEND=noninteractive
+sed -i "s|http://ubuntu.mirror.afranet.com/ubuntu|http://archive.ubuntu.com/ubuntu|g" /etc/apt/sources.list
 
 apt-get update
 apt-get install -y curl tar nginx apache2 certbot python3-certbot-nginx
